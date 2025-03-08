@@ -1,1 +1,8 @@
+@import url(./assets/fonts.css);
 @import "tailwindcss";
+
+@theme{
+    --color-primary: #E82561
+}
+
+/*#e72e77 */
