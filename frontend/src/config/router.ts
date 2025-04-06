@@ -13,6 +13,9 @@ import MehendiList from "../pages/ServicePage/MehendiList";
 import MehendiDetail from "../pages/ServicePage/MehendiDetail";
 import DecorationList from "../pages/ServicePage/DecorationList"; // ✅ Import
 import DecorationDetail from "../pages/ServicePage/DecorationDetail"; // ✅ Import
+import About from "../pages/AboutPage/About";
+import Contact from "../pages/ContactPage/Contact";
+import Gallery from "../pages/GalleryPage/Gallery";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +25,18 @@ export const router = createBrowserRouter([
       {
         path: '',
         Component: HomePage,
+      },
+      {
+        path: 'about',
+        Component:About,
+      },
+      {
+        path:"contact" ,
+        Component:Contact, 
+      },
+      {
+        path:"gallery", 
+        Component:Gallery ,
       },
       {
         path: 'login',
