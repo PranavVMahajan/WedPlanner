@@ -88,7 +88,7 @@ const LoginPage = () => {
                    </div> 
                    <div className="mb-3">
                     <p className="text-center">
-                    <Link to={'/forget'} className="text-gray-600 mx-auto text-center font-[PoppinSemibold]">Forget Password?</Link>
+                    <Link to={'/forgot'} className="text-gray-600 mx-auto text-center font-[PoppinSemibold]">Forget Password?</Link>
 
                     </p>
                         <p className="text-end text-primary font-[PoppinSemibold]">Dont Have An Account? <Link to={'/register'}>Register</Link></p>
