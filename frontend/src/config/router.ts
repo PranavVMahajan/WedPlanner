@@ -16,6 +16,7 @@ import DecorationDetail from "../pages/ServicePage/DecorationDetail"; // ✅ Imp
 import About from "../pages/AboutPage/About";
 import Contact from "../pages/ContactPage/Contact";
 import Gallery from "../pages/GalleryPage/Gallery";
+import VenueDetails from "../pages/VenueDetailsPage/VenueDetails";
 
 export const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ export const router = createBrowserRouter([
       {
         path: 'forgot',
         Component: ForgotPasswordPage,
+      },
+      {
+        path: 'venue/:venueName',
+        Component: VenueDetails,
       },
       {
         path: 'services/:serviceId',

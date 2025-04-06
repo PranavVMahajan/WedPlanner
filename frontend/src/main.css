@@ -1,5 +1,7 @@
+
 @import url(./assets/fonts.css);
 @import "tailwindcss";
+
 
 @theme{
     --color-primary: #E82561
@@ -7,6 +9,9 @@
 
 /*#e72e77 */
 
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 
 
 /* From Uiverse.io by AbanoubMagdy1 */ 

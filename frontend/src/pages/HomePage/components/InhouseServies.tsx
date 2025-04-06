@@ -12,19 +12,19 @@ const services = [
     id: "caterer",
     title: "Delicious Catering",
     description: "Tasty food for your events",
-    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+    image: "https://images.unsplash.com/photo-1680359873864-43e89bf248ac?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "mehendi",
     title: "Elegant Mehendi Artists",
     description: "Beautiful designs for every bride",
-    image: "https://images.unsplash.com/photo-1576471235157-d4cae4f9f3e5"
+    image: "https://plus.unsplash.com/premium_photo-1661862397518-8e50332b6e97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "decorations",
     title: "Royal Decorations",
     description: "Stunning decor setups",
-    image: "https://images.unsplash.com/photo-1580247819510-94fd0e5c1d9d"
+    image: "https://images.unsplash.com/photo-1737236118342-d4c175bf0814?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ];
 

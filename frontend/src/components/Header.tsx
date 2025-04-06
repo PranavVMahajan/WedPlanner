@@ -1,44 +1,43 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom"; // Correct import for react-router-dom
 
 const Header = () => {
   return (
-    <header className="body-font bg-primary text-white">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <header className="bg-primary text-white shadow-md">
+      <div className="container mx-auto flex flex-wrap items-center justify-between px-5 py-4">
+        {/* Logo Section */}
         <Link
           to="/"
-          className="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+          className="flex items-center text-white font-bold text-2xl tracking-wide"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            className="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-          </svg>
-          <span className="ml-3 text-xl">Tailblocks</span>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/8044/8044746.png" 
+              className="w-10 h-10"
+            />
+
+          <span className="ml-3">Wed-Planner</span>
         </Link>
 
-        <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center">
-          <Link to="/services" className="mr-5 hover:text-gray-300">
+        {/* Navigation Links */}
+        <nav className="flex flex-wrap items-center space-x-6 text-base font-medium">
+          <Link to="/services" className="hover:text-gray-300 transition">
             Services
           </Link>
-          <Link to="/about" className="mr-5 hover:text-gray-300">
+          <Link to="/about" className="hover:text-gray-300 transition">
             About
           </Link>
-          <Link to="/gallery" className="mr-5 hover:text-gray-300">
+          <Link to="/gallery" className="hover:text-gray-300 transition">
             Gallery
           </Link>
-          <Link to="/contact" className="mr-5 hover:text-gray-300">
+          <Link to="/contact" className="hover:text-gray-300 transition">
             Contact
           </Link>
         </nav>
 
-        <Link to="/login" className="bg-black/10 px-7 py-2 rounded-2xl text-white hover:bg-black/20 transition">
+        {/* Login Button */}
+        <Link
+          to="/login"
+          className="bg-white text-primary font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition duration-300"
+        >
           Login
         </Link>
       </div>
