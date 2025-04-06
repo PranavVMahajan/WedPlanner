@@ -129,6 +129,29 @@ const CatererDetail = () => {
   const { id } = useParams<{ id: string }>();
   const caterer = caterers.find((c) => c.id === id);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    eventType: "Wedding",
+    date: "",
+    plates: "",
+    cuisine: "",
+    location: "",
+    notes: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Booking Form Submitted:", formData);
+    alert("Booking request sent!");
+    setIsModalOpen(false);
+  };
 
   const nextImage = () => setCurrentIndex((prev) => (prev + 1) % caterer!.images.length);
   const prevImage = () => setCurrentIndex((prev) => (prev - 1 + caterer!.images.length) % caterer!.images.length);
@@ -183,7 +206,10 @@ const CatererDetail = () => {
             <p><strong>Locations Available:</strong> {caterer.locations.join(", ")}</p>
           </div>
 
-          <button className="mt-4 bg-primary text-white px-6 py-2 rounded-xl shadow hover:bg-primary/90 transition duration-300">
+          <button
+            className="mt-4 bg-primary text-white px-6 py-2 rounded-xl shadow hover:bg-primary/90 transition duration-300"
+            onClick={() => setIsModalOpen(true)}
+          >
             Confirm Booking
           </button>
         </div>
@@ -196,6 +222,147 @@ const CatererDetail = () => {
           <p><strong>Address:</strong> {caterer.contact.address}</p>
         </div>
       </div>
+
+      {/* Modal with Booking Form */}
+      {isModalOpen && (
+      <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50 px-4">
+        <div className="bg-white p-6 rounded-2xl w-full max-w-2xl shadow-2xl relative">
+
+          {/* Close Button */}
+          <button
+            onClick={() => setIsModalOpen(false)}
+            className="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl font-bold focus:outline-none"
+            aria-label="Close modal"
+          >
+            &times;
+          </button>
+
+          <h2 className="text-3xl font-semibold mb-6 text-center text-gray-800">Book {caterer.name}</h2>
+
+          <form onSubmit={handleSubmit} className="space-y-6 max-h-[75vh] overflow-y-auto pr-1">
+            {/* Row 1: Name & Phone */}
+            <div className="grid sm:grid-cols-2 gap-6">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Full Name"
+                required
+                className="input-style"
+              />
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Mobile Number"
+                required
+                className="input-style"
+              />
+            </div>
+
+            {/* Row 2: Email */}
+            <div>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+                required
+                className="input-style"
+              />
+            </div>
+
+            {/* Row 3: Event Type & Date */}
+            <div className="grid sm:grid-cols-2 gap-6">
+              <select
+                name="eventType"
+                value={formData.eventType}
+                onChange={handleChange}
+                required
+                className="input-style"
+              >
+                <option value="" disabled>Select Event Type</option>
+                <option value="Wedding">Wedding</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Corporate">Corporate</option>
+                <option value="Engagement">Engagement</option>
+                <option value="Other">Other</option>
+              </select>
+
+              <input
+                type="date"
+                name="date"
+                value={formData.date}
+                onChange={handleChange}
+                required
+                className="input-style"
+              />
+            </div>
+
+            {/* Row 4: Plates & Cuisine */}
+            <div className="grid sm:grid-cols-2 gap-6">
+              <input
+                type="number"
+                name="plates"
+                value={formData.plates}
+                onChange={handleChange}
+                placeholder="Number of Plates"
+                required
+                className="input-style"
+              />
+              <input
+                type="text"
+                name="cuisine"
+                value={formData.cuisine}
+                onChange={handleChange}
+                placeholder="Preferred Cuisine (e.g., Punjabi, South Indian)"
+                className="input-style"
+              />
+            </div>
+
+            {/* Row 5: Location */}
+            <div>
+              <input
+                type="text"
+                name="location"
+                value={formData.location}
+                onChange={handleChange}
+                placeholder="Event Location"
+                required
+                className="input-style"
+              />
+            </div>
+
+            {/* Row 6: Notes */}
+            <div>
+              <textarea
+                name="notes"
+                value={formData.notes}
+                onChange={handleChange}
+                placeholder="Additional Notes (optional)"
+                rows={3}
+                className="input-style resize-none"
+              />
+            </div>
+
+            {/* Submit Button */}
+            <div className="flex justify-end pt-2">
+              <button
+                type="submit"
+                className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-all duration-200"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+)}
+
+
     </div>
   );
 };
