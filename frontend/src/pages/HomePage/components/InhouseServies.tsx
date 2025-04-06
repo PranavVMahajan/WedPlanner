@@ -21,7 +21,7 @@ const services = [
     image: "https://images.unsplash.com/photo-1576471235157-d4cae4f9f3e5"
   },
   {
-    id: "decorator",
+    id: "decorations",
     title: "Royal Decorations",
     description: "Stunning decor setups",
     image: "https://images.unsplash.com/photo-1580247819510-94fd0e5c1d9d"
