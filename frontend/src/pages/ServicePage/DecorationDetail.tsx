@@ -13,7 +13,7 @@ type Decorator = {
 const decoratorData: Record<string, Decorator> = {
   "floral-dreams": {
     name: "Floral Dreams",
-    image: "https://images.unsplash.com/photo-1530026405186-ed1f13931385",
+    image: "https://images.unsplash.com/photo-1735052713313-40c183b5e4cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Elegant floral decorations with beautiful arrangements for a dream wedding setting.",
     services: ["Stage Decoration", "Table Centerpieces", "Entrance Floral Arches"],
     price: "From ₹30,000",
@@ -21,7 +21,7 @@ const decoratorData: Record<string, Decorator> = {
   },
   "royal-touch": {
     name: "Royal Touch Decor",
-    image: "https://images.unsplash.com/photo-1581092334440-1dcdb3cf61b3",
+    image: "https://images.unsplash.com/photo-1606293926249-ed22e446d476?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Grand and royal-themed decorations to give your wedding a majestic feel.",
     services: ["Royal Stage Setup", "Throne Chairs", "Golden Drapes"],
     price: "From ₹45,000",
@@ -29,7 +29,7 @@ const decoratorData: Record<string, Decorator> = {
   },
   "light-and-lace": {
     name: "Light & Lace",
-    image: "https://images.unsplash.com/photo-1583278853656-01fd3c482675",
+    image: "https://images.unsplash.com/photo-1544718426-17dea2c0b7ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Soft lighting and lacy details for a romantic wedding vibe.",
     services: ["Fairy Light Curtains", "Lace Tents", "Chandelier Decor"],
     price: "From ₹25,000",
@@ -37,7 +37,7 @@ const decoratorData: Record<string, Decorator> = {
   },
   "modern-aura": {
     name: "Modern Aura",
-    image: "https://images.unsplash.com/photo-1579547945394-08a0f43d3f9e",
+    image: "https://images.unsplash.com/photo-1635349134493-492ca24f2f03?q=80&w=2093&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Minimalist and modern decoration concepts with clean aesthetics.",
     services: ["Geometric Backdrops", "LED Installations", "Contemporary Florals"],
     price: "From ₹40,000",
@@ -45,7 +45,7 @@ const decoratorData: Record<string, Decorator> = {
   },
   "rustic-elegance": {
     name: "Rustic Elegance",
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb",
+    image: "https://images.unsplash.com/photo-1726055532632-d4d34c5233b2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Rustic wooden themes with vintage charm.",
     services: ["Barn Style Decor", "Wooden Props", "Rustic Floral Jars"],
     price: "From ₹28,000",
@@ -53,7 +53,7 @@ const decoratorData: Record<string, Decorator> = {
   },
   "classic-vibe": {
     name: "Classic Vibe Events",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
+    image: "https://images.unsplash.com/photo-1741441029103-97748be1bf39?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Elegant and timeless decoration styles.",
     services: ["Red Carpet Entry", "Classic Stage", "Vintage Centerpieces"],
     price: "From ₹35,000",

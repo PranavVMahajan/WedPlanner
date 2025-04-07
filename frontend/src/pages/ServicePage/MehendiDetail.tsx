@@ -8,7 +8,7 @@ const mehendiArtists = [
       name: "Henna Hues",
       description: "Traditional and contemporary mehendi artistry.",
       images: [
-        "https://images.unsplash.com/photo-1575202332840-8ecb94f5e2c4",
+        "https://images.unsplash.com/photo-1556536088-f010a312a8d3?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1598340730877-23df36b2d6e6",
         "https://images.unsplash.com/photo-1600854103454-e3ee70449fe0",
       ],
@@ -27,7 +27,7 @@ const mehendiArtists = [
       name: "Mehendi Magic",
       description: "Elegant bridal mehendi with intricate patterns.",
       images: [
-        "https://images.unsplash.com/photo-1632169045912-f831a59b9bb6",
+        "https://images.unsplash.com/photo-1554787388-9194e4eb57a3?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1603066313566-62b87d35df9a",
         "https://images.unsplash.com/photo-1601394369932-6e3e8fc3f0ab",
       ],
@@ -46,7 +46,7 @@ const mehendiArtists = [
       name: "Artistic Henna",
       description: "Custom designs with natural organic paste.",
       images: [
-        "https://images.unsplash.com/photo-1600854103454-e3ee70449fe0",
+        "https://images.unsplash.com/photo-1730003873829-09b4b16444c1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1552037999-36f53b0b54c2",
         "https://images.unsplash.com/photo-1632168720077-fdc3a3b88ee8",
       ],
@@ -61,11 +61,11 @@ const mehendiArtists = [
       },
     },
     {
-      id: "royal-henna",
+      id: "royal-mehendi",
       name: "Royal Henna Art",
       description: "Royal mehendi styles for regal brides.",
       images: [
-        "https://images.unsplash.com/photo-1505919252683-6c3c79c6e6fb",
+        "https://images.unsplash.com/photo-1619734089700-842e56497353?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1548281433-2b8f94a7a2a3",
         "https://images.unsplash.com/photo-1601394348743-cdf97e5f4e02",
       ],
@@ -84,7 +84,7 @@ const mehendiArtists = [
       name: "Delicate Designs",
       description: "Subtle and elegant designs for intimate weddings.",
       images: [
-        "https://images.unsplash.com/photo-1520975922077-317acef9c244",
+        "https://images.unsplash.com/photo-1613665667184-81bb9b8605e2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb",
         "https://images.unsplash.com/photo-1594041680070-bb81b9e5fd54",
       ],
@@ -103,7 +103,7 @@ const mehendiArtists = [
       name: "Fusion Fingers",
       description: "Fusion of traditional and modern mehendi patterns.",
       images: [
-        "https://images.unsplash.com/photo-1587213811864-3d26c9530c9f",
+        "https://images.unsplash.com/photo-1563299182-246a920b4021?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1582892889828-0587eb85c6ec",
         "https://images.unsplash.com/photo-1587314168481-f2b4d7b7e18e",
       ],

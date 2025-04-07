@@ -8,7 +8,7 @@ const caterers = [
     name: "Royal Feast Caterers",
     description: "Lavish menus for royal weddings.",
     images: [
-      "https://images.unsplash.com/photo-1604909053195-74e0497b1b3f",
+      "https://images.unsplash.com/photo-1742281258189-3b933879867a?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1613145998434-c1a2334c30db",
       "https://images.unsplash.com/photo-1589307000270-ccb24650d430",
     ],
@@ -28,7 +28,7 @@ const caterers = [
     name: "Taste Buds Catering",
     description: "Flavors from all over India on one plate.",
     images: [
-      "https://images.unsplash.com/photo-1576402187873-efbdd2112b46",
+      "https://images.unsplash.com/photo-1589778655375-3e622a9fc91c?q=80&w=2031&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1572635196237-8b0c6a598b9b",
       "https://images.unsplash.com/photo-1576402188039-bd8a03c7ec73",
     ],
@@ -48,7 +48,7 @@ const caterers = [
     name: "Urban Bites",
     description: "Trendy and modern culinary experiences.",
     images: [
-      "https://images.unsplash.com/photo-1551218808-94e220e084d2",
+      "https://images.unsplash.com/photo-1708782341026-f4877b52fee7?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1546069901-eacef0df6022",
       "https://images.unsplash.com/photo-1543353071-873f17a7a088",
     ],
@@ -68,7 +68,7 @@ const caterers = [
     name: "Grand Banquet Services",
     description: "Perfect for large and luxurious wedding parties.",
     images: [
-      "https://images.unsplash.com/photo-1613145998434-c1a2334c30db",
+      "https://images.unsplash.com/photo-1727404679933-99daa2a7573a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
       "https://images.unsplash.com/photo-1569058242118-27e6c05d7c6f",
     ],
@@ -88,7 +88,7 @@ const caterers = [
     name: "Flavor Fiesta",
     description: "Fusion food and artistic presentation.",
     images: [
-      "https://images.unsplash.com/photo-1625940846150-c7c9b3897c67",
+      "https://images.unsplash.com/photo-1588644525273-f37b60d78512?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1547592180-6515026c3a79",
       "https://images.unsplash.com/photo-1536520002442-ea6bdb5fdb0f",
     ],
@@ -108,7 +108,7 @@ const caterers = [
     name: "Heritage Thali",
     description: "Authentic Indian regional thalis with tradition.",
     images: [
-      "https://images.unsplash.com/photo-1589307000270-ccb24650d430",
+      "https://images.unsplash.com/photo-1710378776019-b731011005cd?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "https://images.unsplash.com/photo-1601312373696-74f99c8460c1",
       "https://images.unsplash.com/photo-1605478371268-6e181ecd2358",
     ],

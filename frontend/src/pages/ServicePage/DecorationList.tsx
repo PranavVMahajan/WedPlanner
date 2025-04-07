@@ -6,37 +6,37 @@ const decorators = [
     id: "floral-dreams",
     name: "Floral Dreams",
     description: "Elegant floral decorations for dream weddings.",
-    image: "https://images.unsplash.com/photo-1530026405186-ed1f13931385",
+    image: "https://images.unsplash.com/photo-1735052713313-40c183b5e4cf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "royal-touch",
     name: "Royal Touch Decor",
     description: "Royal-themed stage and venue decor.",
-    image: "https://images.unsplash.com/photo-1581092334440-1dcdb3cf61b3",
+    image: "https://images.unsplash.com/photo-1606293926249-ed22e446d476?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "light-and-lace",
     name: "Light & Lace",
     description: "Whimsical lighting and lace-themed backdrops.",
-    image: "https://images.unsplash.com/photo-1583278853656-01fd3c482675",
+    image: "https://images.unsplash.com/photo-1544718426-17dea2c0b7ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "modern-aura",
     name: "Modern Aura",
     description: "Minimalist and chic event decor solutions.",
-    image: "https://images.unsplash.com/photo-1579547945394-08a0f43d3f9e",
+    image: "https://images.unsplash.com/photo-1635349134493-492ca24f2f03?q=80&w=2093&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "rustic-elegance",
     name: "Rustic Elegance",
     description: "Rustic vintage themes with wooden decor.",
-    image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb",
+    image: "https://images.unsplash.com/photo-1726055532632-d4d34c5233b2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: "classic-vibe",
     name: "Classic Vibe Events",
     description: "Timeless wedding decorations with a classic touch.",
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
+    image: "https://images.unsplash.com/photo-1741441029103-97748be1bf39?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 

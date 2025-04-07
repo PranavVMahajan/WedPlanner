@@ -9,7 +9,7 @@ const photographers = [
       name: "Pixel Studio",
       description: "Creative photography for weddings & events.",
       images: [
-        "https://images.unsplash.com/photo-1542315192-1a66b6a5c4b5",
+        "https://images.unsplash.com/photo-1583878545126-2f1ca0142714?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1552152370-fb05b25ff17b",
         "https://images.unsplash.com/photo-1568605114967-8130f3a36994",
       ],
@@ -29,7 +29,7 @@ const photographers = [
       name: "Light Capture Studio",
       description: "Modern and stylish wedding captures.",
       images: [
-        "https://images.unsplash.com/photo-1520639888714-7b11140c2592",
+        "https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1590080876094-30ecdc9b06c4",
         "https://images.unsplash.com/photo-1574158622682-e40e69881006",
       ],
@@ -49,7 +49,7 @@ const photographers = [
       name: "FlashFrame Studio",
       description: "Elegant moments with every click.",
       images: [
-        "https://images.unsplash.com/photo-1530023367847-a683933f417a",
+        "https://images.unsplash.com/photo-1647949940712-bfcf82015d9b?q=80&w=2025&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1541417904950-b855846fe074",
         "https://images.unsplash.com/photo-1532619187608-e5375cab36f3",
       ],
@@ -69,7 +69,7 @@ const photographers = [
       name: "LensArt Photography",
       description: "Bringing your wedding story to life.",
       images: [
-        "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+        "https://images.unsplash.com/photo-1583878544826-8f8c418033ed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1504198453319-5ce911bafcde",
         "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c",
       ],
@@ -89,7 +89,7 @@ const photographers = [
       name: "Clicks & Smiles",
       description: "Candid wedding moments beautifully captured.",
       images: [
-        "https://images.unsplash.com/photo-1587300003388-59208cc962cb",
+        "https://images.unsplash.com/photo-1587271511223-18b7ef9a327a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1526045612212-70caf35c14df",
         "https://images.unsplash.com/photo-1525163249096-b399effeacc1",
       ],
@@ -109,7 +109,7 @@ const photographers = [
       name: "DreamShots Studio",
       description: "Turning dreams into frames.",
       images: [
-        "https://images.unsplash.com/photo-1582719478148-97053855234c",
+        "https://images.unsplash.com/photo-1735052709798-2abcc8c0d6e1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb",
         "https://images.unsplash.com/photo-1519125323398-675f0ddb6308",
       ],

@@ -28,7 +28,7 @@ const About = () => {
 
       <div className="mt-12 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <motion.img
-          src="https://images.unsplash.com/photo-1520091451026-9d8de3c646d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80"
+          src="https://plus.unsplash.com/premium_photo-1682092592909-8d26686e7f5e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Wedding Planning"
           className="w-full h-96 object-cover rounded-2xl shadow-lg"
           initial={{ opacity: 0, x: -50 }}
