@@ -1,6 +1,6 @@
 import Hero from "./components/Hero"
 import PopularSearch from "./components/PopularSearch"
-import PopularVenue from "./components/PopularVenue"
+import PopularDanceMusic from "./components/PopularDanceMusic"
 import WeddingCategories from "./components/WeddingCategories"
 import InhouseServies from "./components/InhouseServies"
 
@@ -8,8 +8,8 @@ const HomePage = () => {
   return (
     <div>
       <Hero />
-      <PopularVenue />
       <PopularSearch />
+      <PopularDanceMusic />
       <WeddingCategories />
       <InhouseServies />
     </div>
