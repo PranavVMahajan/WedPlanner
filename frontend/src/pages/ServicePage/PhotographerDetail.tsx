@@ -125,12 +125,12 @@ const photographers = [
       },
     },
   ];
-  
+
 
   const PhotographerDetail = () => {
     const { photographerId } = useParams<{ photographerId: string }>();
     const photographer = photographers.find((p) => p.id === photographerId);
-  
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showBookingForm, setShowBookingForm] = useState(false);
     const [formData, setFormData] = useState({
@@ -141,22 +141,22 @@ const photographers = [
       location: "",
       budget: "",
     });
-  
+
     if (!photographer) return <div>Photographer not found</div>;
-  
+
     const prevImage = () => {
       setCurrentIndex((prev) => (prev === 0 ? photographer.images.length - 1 : prev - 1));
     };
-  
+
     const nextImage = () => {
       setCurrentIndex((prev) => (prev === photographer.images.length - 1 ? 0 : prev + 1));
     };
-  
+
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
       const { name, value } = e.target;
       setFormData((prev) => ({ ...prev, [name]: value }));
     };
-  
+
     const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
       console.log("Booking Submitted:", formData);
@@ -171,7 +171,7 @@ const photographers = [
       });
       setShowBookingForm(false);
     };
-  
+
     return (
       <div className="max-w-6xl mx-auto px-4 py-10 space-y-10">
         {/* Image Slider */}
@@ -194,14 +194,14 @@ const photographers = [
             <ChevronRight />
           </button>
         </div>
-  
+
         {/* Details Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Left Side */}
           <div className="space-y-5">
             <h2 className="text-3xl font-bold text-primary">{photographer.name}</h2>
             <p className="text-gray-600 text-base">{photographer.description}</p>
-  
+
             <div className="flex flex-wrap gap-2">
               {photographer.services.map((service, idx) => (
                 <span
@@ -212,7 +212,7 @@ const photographers = [
                 </span>
               ))}
             </div>
-  
+
             <div className="text-sm text-gray-700 space-y-2 pt-4">
               <p>
                 <strong>Quotation:</strong> {photographer.quotation}
@@ -224,7 +224,7 @@ const photographers = [
                 <strong>Locations Available:</strong> {photographer.locations.join(", ")}
               </p>
             </div>
-  
+
             {/* Booking Button */}
             <button
               className="mt-4 bg-primary text-white px-6 py-2 rounded-xl shadow hover:bg-primary/90 transition duration-300"
@@ -233,7 +233,7 @@ const photographers = [
               Confirm Booking
             </button>
           </div>
-  
+
           {/* Contact Info */}
           <div className="bg-gray-100 rounded-xl p-6 shadow space-y-4">
             <h3 className="text-xl font-semibold">Contact Information</h3>
@@ -251,7 +251,7 @@ const photographers = [
             </p>
           </div>
         </div>
-  
+
         {/* Booking Modal Overlay */}
         {showBookingForm && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
@@ -263,9 +263,9 @@ const photographers = [
               >
                 <X size={24} />
               </button>
-  
+
               <h2 className="text-2xl font-bold mb-6 text-center">Booking Form</h2>
-  
+
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
@@ -328,7 +328,7 @@ const photographers = [
                     className="border px-4 py-2 rounded-md"
                   />
                 </div>
-  
+
                 <div className="text-center pt-4">
                   <button
                     type="submit"
@@ -344,5 +344,5 @@ const photographers = [
       </div>
     );
   };
-  
+
   export default PhotographerDetail;
