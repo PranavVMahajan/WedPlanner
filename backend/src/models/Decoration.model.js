@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const floralDecorationSchema = new mongoose.Schema(
   {
-    id: { type: String, required: true, unique: true }, // e.g., "floral-dreams"
+    id: { type: String, unique: true }, // e.g., "floral-dreams"
     name: { type: String, required: true },
     image: { type: String, required: true }, // single image URL
     shortDescription: { type: String }, // brief summary

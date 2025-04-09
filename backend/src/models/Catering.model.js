@@ -9,7 +9,7 @@ const contactSchema = new mongoose.Schema({
 
 const catererSchema = new mongoose.Schema(
   {
-    id: { type: String, required: true, unique: true }, // e.g., "royal-feast"
+    id: { type: String, unique: true }, // e.g., "royal-feast"
     name: { type: String, required: true },
     description: { type: String },
     images: [{ type: String }], // array of image URLs

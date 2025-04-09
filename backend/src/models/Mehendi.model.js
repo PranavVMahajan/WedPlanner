@@ -9,7 +9,7 @@ const contactSchema = new mongoose.Schema({
 
 const mehendiArtistSchema = new mongoose.Schema(
   {
-    id: { type: String, required: true, unique: true }, // e.g., "henna-hues"
+    id: { type: String, unique: true }, // e.g., "henna-hues"
     name: { type: String, required: true },
     description: { type: String },
     images: [{ type: String }], // Array of image URLs

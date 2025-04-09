@@ -10,7 +10,6 @@ const contactSchema = new mongoose.Schema({
 const photographerSchema = new mongoose.Schema({
   id: {
     type: String,
-    required: true,
     unique: true,
   },
   name: String,
