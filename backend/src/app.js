@@ -15,6 +15,7 @@ const cateringRoutes = require("./routes/cateringRouter");
 const mehendiRoutes = require("./routes/mehendiRouter");
 const decorationRoutes = require("./routes/decorationRouter");
 const venuesRoutes = require("./routes/venuesRouter");
+const galleryRoutes = require("./routes/galleryRouter");
 
 //routes
 app.use("/api/v1",require("./routes"))
@@ -22,7 +23,8 @@ app.use("/api/inhouseServices/photographers", photographerRoutes);
 app.use("/api/inhouseServices/catering", cateringRoutes);
 app.use("/api/inhouseServices/mehendi", mehendiRoutes);
 app.use("/api/inhouseServices/decoration", decorationRoutes);
-app.use("/api/inhouseServices/venues", venuesRoutes);
+app.use("/api/venues", venuesRoutes);
+app.use("/api/gallery", galleryRoutes);
 app.use("/api/inhouseServices", serviceRoutes);
 
 // 404 page
