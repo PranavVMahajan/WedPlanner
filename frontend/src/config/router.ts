@@ -17,6 +17,7 @@ import About from "../pages/AboutPage/About";
 import Contact from "../pages/ContactPage/Contact";
 import Gallery from "../pages/GalleryPage/Gallery";
 import VenueDetails from "../pages/VenueDetailsPage/VenueDetails";
+import InhouseServices from "../pages/HomePage/components/InhouseServies";
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ export const router = createBrowserRouter([
       {
         path: 'register',
         Component: RegisterPage,
+      },
+      {
+        path:'/services',
+        Component: InhouseServices,
       },
       {
         path: 'forgot',

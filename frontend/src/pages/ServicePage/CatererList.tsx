@@ -47,24 +47,30 @@ const CatererList = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
-      {caterers.map((caterer) => (
-        <div
-          key={caterer.id}
-          className="cursor-pointer border rounded-lg shadow hover:shadow-lg transition"
-          onClick={() => handleClick(caterer.id)}
-        >
-          <img
-            src={caterer.image}
-            alt={caterer.name}
-            className="rounded-t-lg w-full h-48 object-cover"
-          />
-          <div className="p-4">
-            <h3 className="text-xl font-bold">{caterer.name}</h3>
-            <p className="text-gray-600">{caterer.description}</p>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <h2 className="text-3xl font-bold text-center text-primary mb-10">Top Caterers for Your Wedding</h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        {caterers.map((caterer) => (
+          <div
+            key={caterer.id}
+            onClick={() => handleClick(caterer.id)}
+            className="cursor-pointer bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
+          >
+            <div className="h-56 overflow-hidden">
+              <img
+                src={caterer.image}
+                alt={caterer.name}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="p-4">
+              <h3 className="text-xl font-semibold text-gray-800 mb-1">{caterer.name}</h3>
+              <p className="text-gray-600 text-sm">{caterer.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
