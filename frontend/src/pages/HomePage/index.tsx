@@ -1,5 +1,5 @@
 import Hero from "./components/Hero"
-import PopularSearch from "./components/PopularSearch"
+import PopularSearch from "./components/Wears"
 import PopularDanceMusic from "./components/PopularDanceMusic"
 import WeddingCategories from "./components/WeddingCategories"
 import InhouseServies from "./components/InhouseServies"

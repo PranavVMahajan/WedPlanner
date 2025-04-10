@@ -18,6 +18,9 @@ import Contact from "../pages/ContactPage/Contact";
 import Gallery from "../pages/GalleryPage/Gallery";
 import VenueDetails from "../pages/VenueDetailsPage/VenueDetails";
 import InhouseServices from "../pages/HomePage/components/InhouseServies";
+import WearList from "../pages/WearPage/WearList";
+import WearDetail from "../pages/WearPage/WearDetail";
+
 
 export const router = createBrowserRouter([
   {
@@ -96,6 +99,14 @@ export const router = createBrowserRouter([
         path: 'services/decorations/:id', // ✅ Decoration detail route
         Component: DecorationDetail,
       },
+      {
+        path: 'wears',
+        Component: WearList,
+      },
+      {
+        path: 'wears/:wearName',
+        Component: WearDetail,
+      },      
     ],
   },
 ]);
