@@ -20,6 +20,8 @@ import VenueDetails from "../pages/VenueDetailsPage/VenueDetails";
 import InhouseServices from "../pages/HomePage/components/InhouseServies";
 import WearList from "../pages/WearPage/WearList";
 import WearDetail from "../pages/WearPage/WearDetail";
+import MusicList from "../pages/MusicPage/MusicList";
+import MusicDetail from "../pages/MusicPage/MusicDetail";
 
 
 export const router = createBrowserRouter([
@@ -106,7 +108,15 @@ export const router = createBrowserRouter([
       {
         path: 'wears/:wearName',
         Component: WearDetail,
-      },      
+      },
+      {
+        path: "music",
+        Component: MusicList,
+      },
+      {
+        path: "music/:musicName",
+        Component: MusicDetail,
+      },            
     ],
   },
 ]);
