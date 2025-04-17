@@ -22,7 +22,8 @@ import WearList from "../pages/WearPage/WearList";
 import WearDetail from "../pages/WearPage/WearDetail";
 import MusicList from "../pages/MusicPage/MusicList";
 import MusicDetail from "../pages/MusicPage/MusicDetail";
-
+import Admin from "../pages/AdminPage/Admin";
+import PrivateRoute from "../pages/PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -35,26 +36,40 @@ export const router = createBrowserRouter([
       },
       {
         path: 'about',
-        Component:About,
+        Component: About,
       },
       {
-        path:"contact" ,
-        Component:Contact, 
+        path: "contact",
+        Component: Contact,
       },
       {
-        path:"gallery", 
-        Component:Gallery ,
+        path: "gallery",
+        Component: Gallery,
       },
       {
         path: 'login',
         Component: LoginPage,
       },
       {
+        path: 'admin',
+        Component: LoginPage, // Redirect to login page first
+      },
+      {
+        path: 'admin/dashboard',
+        Component: PrivateRoute, // This route is protected after successful login
+        children: [
+          {
+            path: '', // This means /admin/dashboard
+            Component: Admin, // Your protected component
+          },
+        ],
+      },
+      {
         path: 'register',
         Component: RegisterPage,
       },
       {
-        path:'/services',
+        path: '/services',
         Component: InhouseServices,
       },
       {
@@ -116,7 +131,7 @@ export const router = createBrowserRouter([
       {
         path: "music/:musicName",
         Component: MusicDetail,
-      },            
+      },
     ],
   },
 ]);
