@@ -23,6 +23,7 @@ import WearDetail from "../pages/WearPage/WearDetail";
 import ShopWearDetail from "../pages/WearPage/ShopWearDetail";
 import MusicList from "../pages/MusicPage/MusicList";
 import MusicDetail from "../pages/MusicPage/MusicDetail";
+import ShopMusicDetail from "../pages/MusicPage/ShopMusicDetail";
 import Admin from "../pages/AdminPage/Admin";
 import PrivateRoute from "../pages/PrivateRoute/PrivateRoute";
 
@@ -136,6 +137,10 @@ export const router = createBrowserRouter([
       {
         path: "music/:musicName",
         Component: MusicDetail,
+      },
+      {
+        path: "music/:musicName/:shopName", // ✅ NEW route added
+        Component: ShopMusicDetail,
       },
 
     ],
