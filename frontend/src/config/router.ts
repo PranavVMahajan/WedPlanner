@@ -20,6 +20,7 @@ import VenueDetails from "../pages/VenueDetailsPage/VenueDetails";
 import InhouseServices from "../pages/HomePage/components/InhouseServies";
 import WearList from "../pages/WearPage/WearList";
 import WearDetail from "../pages/WearPage/WearDetail";
+import ShopWearDetail from "../pages/WearPage/ShopWearDetail";
 import MusicList from "../pages/MusicPage/MusicList";
 import MusicDetail from "../pages/MusicPage/MusicDetail";
 import Admin from "../pages/AdminPage/Admin";
@@ -125,6 +126,10 @@ export const router = createBrowserRouter([
         Component: WearDetail,
       },
       {
+        path: 'wears/:wearName/:shopName',
+        Component: ShopWearDetail, // You'll create this next
+      },
+      {
         path: "music",
         Component: MusicList,
       },
@@ -132,6 +137,7 @@ export const router = createBrowserRouter([
         path: "music/:musicName",
         Component: MusicDetail,
       },
+
     ],
   },
 ]);
