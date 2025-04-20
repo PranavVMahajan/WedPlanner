@@ -1,103 +1,158 @@
-// src/pages/MusicDetail.tsx
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { musicDanceCategories } from "../data/musicDanceCategories";
 import { Link } from "react-router-dom";
+
+interface BandProvider {
+  _id: string;
+  name: string;
+  location: string;
+  price: number;
+  image: string;
+  shortDescription: string;
+  description: string;
+  createdAt: string;
+  updatedAt: string;
+}
+
+interface ApiResponse {
+  success: boolean;
+  data: BandProvider[];
+}
 
 const MusicDetail = () => {
   const { musicName } = useParams<{ musicName?: string }>();
+  const [providers, setProviders] = useState<BandProvider[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  if (!musicName) {
+  useEffect(() => {
+    const fetchMusicData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch("http://localhost:1213/api/weddingBand");
+        
+        if (!response.ok) {
+          throw new Error(`API request failed with status: ${response.status}`);
+        }
+        
+        const result: ApiResponse = await response.json();
+        
+        if (result.success) {
+          setProviders(result.data);
+        } else {
+          throw new Error("Failed to get providers data");
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Failed to fetch music providers");
+        console.error("Error fetching music data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMusicData();
+  }, []);
+
+  if (loading) {
     return (
-      <div className="text-center text-2xl text-red-600 py-10">
-        Invalid Music Service
+      <div className="text-center p-8">
+        <h2 className="text-xl">Loading wedding band providers...</h2>
       </div>
     );
   }
 
-  const decodedName = decodeURIComponent(musicName);
-  const music = musicDanceCategories.find(
-    (item) => item.title === decodedName
-  );
-
-  if (!music) {
+  if (error) {
     return (
-      <div className="text-center text-2xl text-red-600 py-10">
-        Music Service Not Found
+      <div className="text-center p-8">
+        <h2 className="text-2xl font-bold text-red-600">Error Loading Providers</h2>
+        <p className="mt-2 text-gray-600">{error}</p>
+        <Link to="/" className="mt-4 inline-block text-blue-600 hover:underline">
+          Return to Home
+        </Link>
       </div>
     );
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-6 py-6">
-      <h1 className="text-4xl font-bold text-primary mb-8 text-center">
-        Available Providers for {music.title}
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-6">
+        Available Wedding Band Providers
       </h1>
-
-      {music.shops && music.shops.length > 0 ? (
-        <div className="mt-8 space-y-8">
-          {music.shops.map((shop, index) => (
-            <Link
-              key={index}
-              to={`/music/${music.title}/${encodeURIComponent(shop.name)}`}
-              className="transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl bg-white rounded-xl p-4 shadow-md min-h-[240px] flex items-stretch gap-6"
-            >
+      
+      {providers.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {providers.map((provider) => (
+            <div key={provider._id} className="border rounded-lg shadow-md overflow-hidden">
               {/* Image */}
-              <img
-                src={shop.image}
-                alt={shop.name}
-                className="w-40 h-auto object-cover rounded-lg"
-              />
-
+              <div className="h-48 bg-gray-200">
+                {provider.image ? (
+                  <img 
+                    src={provider.image} 
+                    alt={provider.name} 
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-gray-200">
+                    <span className="text-gray-500">No image available</span>
+                  </div>
+                )}
+              </div>
+              
               {/* Info Section */}
-              <div className="flex flex-col justify-between flex-1">
-                <div>
-                  <h2 className="text-xl font-semibold text-gray-800">
-                    {shop.name}
-                  </h2>
-                  <p className="text-sm text-gray-500 mb-2">{shop.location}</p>
-                  <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                    <li>Starting from ₹{shop.price}</li>
+              <div className="p-4">
+                <div className="mb-4">
+                  <h3 className="text-xl font-semibold">
+                    {provider.name}
+                  </h3>
+                  <p className="text-gray-600">
+                    {provider.location}
+                  </p>
+                  <p className="mt-2 text-sm text-gray-700">
+                    {provider.shortDescription}
+                  </p>
+                  <ul className="mt-2 text-sm text-gray-700">
+                    <li>Starting from ₹{provider.price}</li>
                     <li>Professional Artists</li>
                     <li>Highly Rated</li>
                   </ul>
                 </div>
-
-                <div className="text-sm text-green-600 font-semibold mt-4">
+                
+                <div className="inline-block bg-green-100 text-green-800 px-2 py-1 rounded text-sm">
                   Verified & Trusted
                 </div>
               </div>
-
+              
               {/* Price Block */}
-              <div className="text-right min-w-[140px] flex flex-col justify-between">
-                <div>
-                  <p className="text-xl font-bold text-green-600">
-                    ₹{shop.price}
-                  </p>
-                  <p className="text-sm line-through text-gray-400">
-                    ₹{shop.price + 1500}
-                  </p>
-                  <p className="text-sm text-green-500">Special Offer</p>
+              <div className="bg-gray-50 p-4 border-t">
+                <div className="flex items-end mb-2">
+                  <span className="text-2xl font-bold text-gray-900">
+                    ₹{provider.price}
+                  </span>
+                  <span className="ml-2 text-sm line-through text-gray-500">
+                    ₹{provider.price + 1500}
+                  </span>
+                  <span className="ml-2 text-xs text-green-600 font-semibold">
+                    Special Offer
+                  </span>
                 </div>
-                <div className="mt-2">
-                  <span className="inline-flex items-center text-xs text-blue-600 font-semibold">
-                    <svg
-                      className="w-4 h-4 mr-1"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 15l-5.878 3.09 1.122-6.545L.488 6.91l6.564-.955L10 0l2.948 5.955 6.564.955-4.756 4.635 1.122 6.545z" />
-                    </svg>
+                
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-md">
+                  Book Now
+                </button>
+                
+                <div className="mt-2 text-center text-xs text-gray-500">
+                  <span className="inline-block bg-blue-100 text-blue-800 px-2 py-1 rounded">
                     Assured
                   </span>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       ) : (
-        <p className="text-center text-gray-500 text-lg">
-          No providers available for this service.
-        </p>
+        <div className="text-center p-8 bg-gray-50 rounded-lg">
+          <p className="text-lg text-gray-600">No providers available for this service.</p>
+        </div>
       )}
     </div>
   );

@@ -60,7 +60,7 @@ const WeddingCategories = () => {
           >
             <div className="flex-1 p-5 space-y-2">
               <h2 className="text-2xl font-semibold">{venue.title}</h2>
-              <p className="text-gray-700">{ venue.description}</p>
+              <p className="text-gray-700">{venue.description}</p>
             </div>
             <img
               src={venue.image}

@@ -29,17 +29,17 @@ const Contact = () => {
       <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-start">
         {/* Left - Developer Info */}
         <div className="bg-primary/5 p-6 rounded-xl shadow-sm space-y-4">
-          <h2 className="text-2xl font-semibold text-primary mb-2">Developer Info</h2>
+          <h2 className="text-2xl font-semibold text-primary mb-2">Our Info</h2>
           <p className="text-gray-700">
-            <span className="font-medium">Name:</span> Pranav Mahajan
+            <span className="font-medium">Name:</span> Wed Planner
           </p>
           <p className="text-gray-700">
             <span className="font-medium">Email:</span>{" "}
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:your.wedplanner@gmail.com"
               className="text-primary hover:underline"
             >
-              your.email@example.com
+              wedplanner@gmail.com
             </a>
           </p>
           <p className="text-gray-700">

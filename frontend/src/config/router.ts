@@ -26,6 +26,13 @@ import MusicDetail from "../pages/MusicPage/MusicDetail";
 import ShopMusicDetail from "../pages/MusicPage/ShopMusicDetail";
 import Admin from "../pages/AdminPage/Admin";
 import PrivateRoute from "../pages/PrivateRoute/PrivateRoute";
+import AdminVenue from "../pages/AdminVenue/AdminVenue";
+import AdminPhotography from "../pages/AdminPhotography/AdminPhotography";
+import AdminSherwani from "../pages/AdminSherwani/AdminSherwani";
+import AdminBands from "../pages/AdminBands/AdminBands";
+import AdminLehengas from "../pages/AdminLehenga/AdminLehenga";
+import AdminCatering from "../pages/AdminCater/AdminCater";
+import AdminDecor from "../pages/AdminDecor/AdminDecor";
 
 export const router = createBrowserRouter([
   {
@@ -63,6 +70,34 @@ export const router = createBrowserRouter([
           {
             path: '', // This means /admin/dashboard
             Component: Admin, // Your protected component
+          },
+          {
+            path: 'venues', // /admin/dashboard/venues
+            Component: AdminVenue,
+          },
+          {
+            path: 'caterers', // /admin/dashboard/venues
+            Component: AdminCatering,
+          },
+          {
+            path: 'decors', // /admin/dashboard/venues
+            Component: AdminDecor,
+          },
+          {
+            path: 'photography', // /admin/dashboard/venues
+            Component: AdminPhotography,
+          },
+          {
+            path: 'sherwani', // /admin/dashboard/venues
+            Component: AdminSherwani,
+          },
+          {
+            path: 'bands', // /admin/dashboard/venues
+            Component: AdminBands,
+          },
+          {
+            path: 'lehenga', // /admin/dashboard/venues
+            Component: AdminLehengas,
           },
         ],
       },
