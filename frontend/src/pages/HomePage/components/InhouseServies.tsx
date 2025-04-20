@@ -1,49 +1,61 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+import axios from "axios";
 
-const services = [
-  {
-    id: "photographer",
-    title: "Pixel Perfect Photography",
-    description: "Capturing memories with style",
-    image: "https://image.wedmegood.com/resized-nw/570X/uploads/wmg_services/genie_dweb.jpg"
-  },
-  {
-    id: "caterer",
-    title: "Delicious Catering",
-    description: "Tasty food for your events",
-    image: "https://images.unsplash.com/photo-1680359873864-43e89bf248ac?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    id: "mehendi",
-    title: "Elegant Mehendi Artists",
-    description: "Beautiful designs for every bride",
-    image: "https://plus.unsplash.com/premium_photo-1661862397518-8e50332b6e97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  },
-  {
-    id: "decorations",
-    title: "Royal Decorations",
-    description: "Stunning decor setups",
-    image: "https://images.unsplash.com/photo-1737236118342-d4c175bf0814?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  }
-];
+interface Service {
+  _id: string;
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  createdAt?: string;
+  updatedAt?: string;
+  __v?: number;
+}
 
 const InhouseServices = () => {
+  const [services, setServices] = useState<Service[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchServices = async () => {
+      try {
+        const response = await axios.get("http://localhost:1213/api/inhouseServices");
+        const servicesData = response.data.data || [];
+        setServices(servicesData);
+        setLoading(false);
+      } catch (err) {
+        setError("Failed to fetch services");
+        setLoading(false);
+        console.error("Error fetching services:", err);
+      }
+    };
+
+    fetchServices();
+  }, []);
+
+  if (loading) {
+    return <div className="w-[80%] mx-auto py-10">Loading services...</div>;
+  }
+
+  if (error) {
+    return <div className="w-[80%] mx-auto py-10 text-red-500">{error}</div>;
+  }
+
   return (
     <div className="w-[80%] mx-auto py-10">
       <div className="text-2xl font-bold py-10 text-primary">Inhouse Services</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
-        {services.map((service, i) => (
-          <Card key={i} service={service} />
+        {services.map((service) => (
+          <Card key={service._id} service={service} />
         ))}
       </div>
     </div>
   );
 };
 
-export default InhouseServices;
-
-const Card = ({ service }: { service: typeof services[0] }) => {
+const Card = ({ service }: { service: Service }) => {
   const [isHover, setIsHover] = useState(false);
   const navigate = useNavigate();
 
@@ -77,3 +89,5 @@ const Card = ({ service }: { service: typeof services[0] }) => {
     </div>
   );
 };
+
+export default InhouseServices;
