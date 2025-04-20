@@ -20,6 +20,9 @@ const sherwaniRoutes = require("./routes/sherwaniRouter");
 const achkanRoutes = require("./routes/achkanRouter");
 const lehengaRoutes = require("./routes/lehengaRouter");
 const sareeRoutes = require("./routes/sareeRouter");
+const choreographerRoutes = require("./routes/choreographerRouter");
+const weddingBandRoutes = require("./routes/weddingBandRouter");
+const DJRoutes = require("./routes/DJRouter");
 
 //routes
 app.use("/api/v1",require("./routes"))
@@ -34,6 +37,9 @@ app.use("/api/sherwani", sherwaniRoutes);
 app.use("/api/achkan", achkanRoutes);
 app.use("/api/lehenga", lehengaRoutes);
 app.use("/api/saree", sareeRoutes);
+app.use("/api/choreographer", choreographerRoutes);
+app.use("/api/weddingBand", weddingBandRoutes);
+app.use("/api/dj", DJRoutes);
 
 // 404 page
 app.use("*",()=>{
